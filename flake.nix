@@ -42,7 +42,11 @@
               };
               buildPhase = ''
                 runHook preBuild
-                dune build --display=short --profile=${if static then "static" else "release"}
+                dune build --display=short --profile=${
+                  if static
+                  then "static"
+                  else "release"
+                }
                 runHook postBuild
               '';
               installPhase = ''
@@ -54,9 +58,6 @@
                 cmdliner
                 ppx_deriving_cmdliner
                 ppx_expect
-                eio
-                eio_main
-                mtime
               ];
             };
       in {
