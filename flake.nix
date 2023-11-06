@@ -37,7 +37,7 @@
                 include = [
                   "src"
                   "dune-project"
-                  "camlchat.opam"
+                  "leetcode_ocaml.opam"
                 ];
               };
               buildPhase = ''
