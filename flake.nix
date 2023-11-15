@@ -58,6 +58,7 @@
                 cmdliner
                 ppx_deriving_cmdliner
                 ppx_expect
+                camlp-streams
               ];
             };
       in {

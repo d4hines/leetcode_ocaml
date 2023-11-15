@@ -1,6 +1,6 @@
 (library
  (name leetcode_ocaml)
- (libraries)
+ (libraries str camlp-streams)
  (inline_tests)
  (preprocess
   (pps ppx_expect ppx_deriving.show)))
