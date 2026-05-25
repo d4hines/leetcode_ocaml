@@ -34,7 +34,7 @@ let delete t k =
 (* let delete = String_map.remove *)
 let begin_ t = t.in_transaction <- true
 
-let commit ({ committed; uncommitted; in_transaction = _; deletes  = _} as t) =
+let commit ({ committed; uncommitted; in_transaction = _; deletes = _ } as t) =
   let committed =
     String_map.merge
       (fun _key committed uncommitted ->
